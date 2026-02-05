@@ -1,0 +1,1 @@
+pub(crate) const MIN_LEVEL: i32 = 1200;

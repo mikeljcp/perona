@@ -1,0 +1,12 @@
+[package]
+name = "perona"
+authors = ['Julie Ribeiro da Silva']
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+player-rating = { path = "crates/playerRating", version = "0.1.0" }
+player-validation = { path = "crates/playerValidation", version = "0.1.0" }
+process = { path = "crates/process", version = "0.1.0" }
+memory = { path = "crates/memory", version = "0.1.0" }
+database = { path = "crates/database", version = "0.1.0" }
