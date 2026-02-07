@@ -7,3 +7,4 @@ exclude = ["/target"]
 
 [dependencies]
 rusqlite = { version = "0.38.0", features = ["bundled"] }
+perona-types = { path = "../types", version = "0.1.0" }

@@ -8,9 +8,8 @@ pub struct Database {
 
 impl Database {
     pub fn new() -> Self {
-        let conn = connection().expect("Error to connect in database");
-
-        Self { client: conn }
+        let client = connection().expect("Error to connect in database");
+        Self { client }
     }
 
     pub fn execute<P>(&self, query: &str, params: P) -> Result<usize, rusqlite::Error>

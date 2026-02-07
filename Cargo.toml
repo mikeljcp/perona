@@ -10,3 +10,4 @@ perona-validation = { path = "crates/validation", version = "0.1.0" }
 perona-process = { path = "crates/process", version = "0.1.0" }
 perona-memory = { path = "crates/memory", version = "0.1.0" }
 perona-database = { path = "crates/database", version = "0.1.0" }
+perona-types = { path = "crates/types", version = "0.1.0" }

@@ -10,7 +10,7 @@ pub struct PlayerValidation {
 }
 
 impl PlayerValidation {
-    
+  
     /*
     pub fn new(killer: String, dead: String) -> Self {
         Self { killer, dead }

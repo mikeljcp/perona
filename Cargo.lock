@@ -156,6 +156,7 @@ dependencies = [
  "perona-memory",
  "perona-player-rating",
  "perona-process",
+ "perona-types",
  "perona-validation",
 ]
 
@@ -163,6 +164,7 @@ dependencies = [
 name = "perona-database"
 version = "0.1.0"
 dependencies = [
+ "perona-types",
  "rusqlite",
 ]
 
@@ -184,6 +186,10 @@ version = "0.1.0"
 dependencies = [
  "sysinfo",
 ]
+
+[[package]]
+name = "perona-types"
+version = "0.1.0"
 
 [[package]]
 name = "perona-validation"

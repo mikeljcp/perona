@@ -1,5 +1,5 @@
 [package]
-name = "perona-process"
+name = "perona-types"
 description = ""
 authors = ['Julie Ribeiro da Silva']
 version = "0.1.0"
@@ -7,4 +7,3 @@ edition = "2024"
 exclude = ["./target"]
 
 [dependencies]
-sysinfo = "0.36.1"

@@ -11,3 +11,4 @@
 * [perona-playeRating](./playeRating/) - 
 * [perona-process](./process/) - 
 * [perona-validation](./validation/) - 
+* [perona-types](./types/) - 

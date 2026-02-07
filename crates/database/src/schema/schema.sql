@@ -6,6 +6,7 @@
 -- PRG = Player Rating Gain
 CREATE TABLE IF NOT EXISTS players (
     id INTEGER PRIMARY KEY NOT NULL,
+    server INTEGER NOT NULL, -- Caso no futuro precise adicionar o sistema em outros servidores; O valor é um enum que começa em 0;
     name VARCHAR(10) NOT NULL UNIQUE,
     level NUMBER NOT NULL DEFAULT 1,
     guild VARCHAR(10) DEFAULT NULL,
