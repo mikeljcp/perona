@@ -1,5 +1,6 @@
 [package]
-name = "process"
+name = "perona-process"
+description = ""
 authors = ['Julie Ribeiro da Silva']
 version = "0.1.0"
 edition = "2024"

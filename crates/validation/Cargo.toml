@@ -1,0 +1,9 @@
+[package]
+name = "perona-validation"
+description = ""
+version = "0.1.0"
+edition = "2024"
+exclude = ["/target"]
+
+[dependencies]
+perona-database = { path = "../database", version = "0.1.0" }

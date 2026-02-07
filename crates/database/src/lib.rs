@@ -1,4 +1,9 @@
 mod database;
 mod repositories;
-pub use repositories::PlayerRepository;
-pub use database::Connection;
+
+use repositories::Repositories;
+use database::DATABASE;
+
+pub fn a() -> Repositories {
+    return Repositories::new()
+}

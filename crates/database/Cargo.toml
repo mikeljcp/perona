@@ -1,7 +1,9 @@
 [package]
-name = "database"
+name = "perona-database"
+description = "Responsavel conexão com banco de dados, queries e repositories."
 version = "0.1.0"
 edition = "2024"
+exclude = ["/target"]
 
 [dependencies]
 rusqlite = { version = "0.38.0", features = ["bundled"] }

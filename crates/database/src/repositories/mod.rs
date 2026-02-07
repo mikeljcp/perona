@@ -1,4 +1,14 @@
-mod player_repository;
-mod player_queries;
+mod player;
 
-pub use player_repository::PlayerRepository;
+use player::PlayerRepository;
+pub struct Repositories {
+    pub player_repository: PlayerRepository,
+}
+
+impl Repositories {
+    pub fn new() -> Self {
+        Self {
+            player_repository: PlayerRepository::new(),
+        }
+    }
+}

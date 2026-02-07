@@ -1,7 +1,9 @@
 [package]
-name = "memory"
+name = "perona-memory"
+description = ""
 version = "0.1.0"
 edition = "2024"
+exclude = ["/target"]
 
 [dependencies]
 proc_mem = "0.1.6"

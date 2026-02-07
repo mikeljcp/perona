@@ -40,13 +40,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
 
 [[package]]
-name = "database"
-version = "0.1.0"
-dependencies = [
- "rusqlite",
-]
-
-[[package]]
 name = "fallible-iterator"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -122,14 +115,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273"
 
 [[package]]
-name = "memory"
-version = "0.1.0"
-dependencies = [
- "proc_mem",
- "serde",
-]
-
-[[package]]
 name = "ntapi"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -167,11 +152,44 @@ checksum = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
 name = "perona"
 version = "0.1.0"
 dependencies = [
- "database",
- "memory",
- "player-rating",
- "player-validation",
- "process",
+ "perona-database",
+ "perona-memory",
+ "perona-player-rating",
+ "perona-process",
+ "perona-validation",
+]
+
+[[package]]
+name = "perona-database"
+version = "0.1.0"
+dependencies = [
+ "rusqlite",
+]
+
+[[package]]
+name = "perona-memory"
+version = "0.1.0"
+dependencies = [
+ "proc_mem",
+ "serde",
+]
+
+[[package]]
+name = "perona-player-rating"
+version = "0.1.0"
+
+[[package]]
+name = "perona-process"
+version = "0.1.0"
+dependencies = [
+ "sysinfo",
+]
+
+[[package]]
+name = "perona-validation"
+version = "0.1.0"
+dependencies = [
+ "perona-database",
 ]
 
 [[package]]
@@ -179,17 +197,6 @@ name = "pkg-config"
 version = "0.3.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7edddbd0b52d732b21ad9a5fab5c704c14cd949e5e9a1ec5929a24fded1b904c"
-
-[[package]]
-name = "player-rating"
-version = "0.1.0"
-
-[[package]]
-name = "player-validation"
-version = "0.1.0"
-dependencies = [
- "database",
-]
 
 [[package]]
 name = "proc-macro2"
@@ -208,13 +215,6 @@ checksum = "5c0dc0491bb8c32eda5ac30b9c84d799c2074a8717d51fab790318ba6bb89eb9"
 dependencies = [
  "regex",
  "winapi",
-]
-
-[[package]]
-name = "process"
-version = "0.1.0"
-dependencies = [
- "sysinfo",
 ]
 
 [[package]]

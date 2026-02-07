@@ -1,10 +1,20 @@
 use rusqlite::Connection;
 
-pub(crate) struct PlayerQueries {
+pub struct PlayerQueries {
     pub client: Connection,
 }
 
 impl PlayerQueries {
+
+    pub fn insert_player(&self) -> bool {
+
+
+        let a = "a";
+    
+
+        false
+    }
+
     pub fn get_guild(&self, player: String) {
         let smt = self
             .client

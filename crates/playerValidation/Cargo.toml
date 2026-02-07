@@ -1,7 +1,0 @@
-[package]
-name = "player-validation"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-database = { path = "../database", version = "0.1.0" }
