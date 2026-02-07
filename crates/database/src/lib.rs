@@ -2,8 +2,7 @@ mod database;
 mod repositories;
 
 use repositories::Repositories;
-use database::DATABASE;
 
-pub fn a() -> Repositories {
-    return Repositories::new()
+pub fn repositories() -> Repositories {
+    Repositories::new()
 }

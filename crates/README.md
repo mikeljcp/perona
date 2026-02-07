@@ -1,7 +1,7 @@
 <h1><p align="center">Ecossistema Perona 👻</p></h1>
 <p align="center">Monorepo oficial contendo todas as bibliotecas do ecossistema da Perona.</p></br>
 
-<div align="center"><img src="../docs/images/banner.webp" width="1000" height="500"></img></div>
+<div align="center"><img src="../docs/images/banner.webp" width="500" height=300"></img></div>
 
 <h1><p align="center">Crates</p></h1>
 <p align="center">Todos os pacotes vivem em `crates/*` e são publicados com a prefix `perona-`</p></br>
