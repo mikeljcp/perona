@@ -7,3 +7,4 @@ exclude = ["/target"]
 
 [dependencies]
 perona-database = { path = "../database", version = "0.1.0" }
+perona-types = { path = "../types", version = "0.1.0" }

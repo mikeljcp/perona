@@ -1,4 +1,5 @@
-use crate::constants::{POINT_DIFFERENCE, POINT_MULTIPLIER};
+use perona_types::constants::{POINT_DIFFERENCE, POINT_MULTIPLIER};
+
 
 
 pub struct PlayerRating {

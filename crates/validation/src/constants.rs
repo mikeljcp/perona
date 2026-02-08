@@ -1,1 +1,0 @@
-pub(crate) const MIN_LEVEL: i64 = 1200;

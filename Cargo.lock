@@ -181,6 +181,9 @@ dependencies = [
 [[package]]
 name = "perona-player-rating"
 version = "0.1.0"
+dependencies = [
+ "perona-types",
+]
 
 [[package]]
 name = "perona-process"
@@ -198,6 +201,7 @@ name = "perona-validation"
 version = "0.1.0"
 dependencies = [
  "perona-database",
+ "perona-types",
 ]
 
 [[package]]

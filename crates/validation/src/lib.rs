@@ -1,8 +1,5 @@
 use perona_database::Repositories;
-
-use crate::constants::MIN_LEVEL;
-
-mod constants;
+use perona_types::constants::MIN_LEVEL;
 
 pub struct PlayerValidation {
     pub killer: String,

@@ -5,3 +5,6 @@ authors = ['Julie Ribeiro da Silva']
 version = "0.1.0"
 edition = "2024"
 exclude = ["/target"]
+
+[dependencies]
+perona-types = { path = "../types", version = "0.1.0"}
