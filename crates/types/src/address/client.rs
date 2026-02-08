@@ -1,4 +1,3 @@
 pub enum ClientAddress {
-    CameraZoom = 0x1858620,
-    CameraCrywolf = 0x1588FC,
+    Messages = 0x6BCC3F2, //0z6BCC3CF
 }

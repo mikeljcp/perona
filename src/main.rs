@@ -1,5 +1,10 @@
-use perona_database::Repositories;
 fn main() {
-    let db = Repositories::new();
-    let _ = db.player_repository.set_player_rating("nicAa", 10);
+    let client = perona_memory::run(13104);
+
+    match client {
+        Ok(game) => {
+            game.messages();
+        }
+        Err(err) => eprintln!("{}", err),
+    }
 }

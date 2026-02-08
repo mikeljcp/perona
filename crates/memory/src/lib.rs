@@ -1,37 +1,22 @@
-use crate::{
-    client::Client,
-    entity::Entity,
-    memory::Memory,
-};
+use crate::{client::Client, memory::Memory};
 
 mod client;
-mod entity;
 mod memory;
 
-pub fn run(pid: u32)  {
+pub fn run(pid: u32) -> Result<Client, String> {
     let process = proc_mem::Process::with_pid(pid);
 
-     match process {
+    match process {
         Ok(process) => {
             let memory = Memory::new(process);
-
-            if !memory.loaded() {
-                return;
-            }
-
-            let entity = Entity::new(&memory);
-            let _ = Client::new(&memory);
+            let client = Client::new(&memory);
 
             if memory.igcn_module().is_err() {
-                return
+                return Err("IGCN module not loadead.".to_string());
             }
 
-            if !entity.is_logged() {
-                return;
-            }
+            Ok(client)
         }
-        Err(_) => {
-            return;
-        }
+        Err(_) => Err("Execute .exe or terminal using mode administrator".to_string()),
     }
 }
