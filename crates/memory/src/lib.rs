@@ -5,7 +5,6 @@ use crate::{
 };
 
 mod client;
-mod constants;
 mod entity;
 mod memory;
 

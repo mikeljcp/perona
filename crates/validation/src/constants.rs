@@ -1,1 +1,1 @@
-pub(crate) const MIN_LEVEL: i32 = 1200;
+pub(crate) const MIN_LEVEL: i64 = 1200;

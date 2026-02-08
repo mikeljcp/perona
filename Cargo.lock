@@ -172,6 +172,7 @@ dependencies = [
 name = "perona-memory"
 version = "0.1.0"
 dependencies = [
+ "perona-types",
  "proc_mem",
  "serde",
 ]

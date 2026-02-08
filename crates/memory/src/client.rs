@@ -1,4 +1,4 @@
-use crate::{constants::ClientAddress, memory::Memory};
+use crate::memory::Memory;
 
 pub(crate) struct Client {
     memory: Memory,

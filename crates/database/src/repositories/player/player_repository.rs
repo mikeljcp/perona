@@ -1,45 +1,43 @@
 use perona_types::Player;
 
-use crate::database::Database;
+use crate::repositories::player::PlayerQueries;
 
 pub struct PlayerRepository {
-    database: Database,
+    query: PlayerQueries,
 }
 
 impl PlayerRepository {
     pub fn new() -> Self {
         Self {
-            database: Database::new(),
+            query: PlayerQueries::new(),
         }
     }
 
-    pub fn insert_player(&self, player: Player) {
-        let Player {
-            name, level, guild, ..
-        } = player;
-        let result = self.database.execute(
-            "INSERT INTO (name, level, guild) VALUES ($1, $2, $3)",
-            (name, level, guild),
-        );
-
-        println!("{result:?}");
+    pub fn add_player(&self, player_name: &str, guild: &str) -> bool {
+        self.query.add_player(player_name, guild)
     }
 
-    /*
-    pub fn get_guild(&self, player: &String) -> Option<String> {
-        Some(String::new())
+    pub fn get_player(&self, player_name: &str) -> Option<Player> {
+        self.query.get_player(player_name)
     }
 
-    pub fn get_level(&self, player: String) -> i32 {
-        0
+    pub fn get_guild(&self, player_name: &str) -> Option<String> {
+        self.query.get_guild(player_name)
     }
 
-    pub fn get_player_rating(&self, player: String) {}
+    pub fn get_level(&self, player_name: &str) -> i64 {
+        self.query.get_level(player_name)
+    }
 
-    pub fn get_last_kill(&self, player: String) {}
+    pub fn get_player_rating(&self, player_name: &str) -> i64 {
+        self.query.get_player_rating(player_name)
+    }
 
-    pub fn get_kills_count(&self, player: String) {}
+    pub fn get_last_kill(&self, player_name: &str) -> Option<String> {
+        self.query.get_last_kill(player_name)
+    }
 
-    pub fn get_players_killed(&self, player: String) {}
-    */
+    pub fn set_player_rating(&self, player_name: &str, player_rating: i64) -> Result<bool, bool> {
+        self.query.set_player_rating(player_name, player_rating)
+    }
 }

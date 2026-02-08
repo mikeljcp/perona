@@ -1,4 +1,6 @@
-use crate::{constants::EntityAddress, memory::Memory};
+use perona_types::EntityAddress;
+
+use crate::memory::Memory;
 
 pub(crate) struct Entity {
     memory: Memory,

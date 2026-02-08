@@ -1,4 +1,4 @@
-//use perona_database::PlayerRepository;
+use perona_database::Repositories;
 
 use crate::constants::MIN_LEVEL;
 
@@ -7,21 +7,27 @@ mod constants;
 pub struct PlayerValidation {
     pub killer: String,
     pub dead: String,
+    pub repositories: Repositories,
 }
 
 impl PlayerValidation {
-  
-    /*
     pub fn new(killer: String, dead: String) -> Self {
-        Self { killer, dead }
+        Self {
+            killer,
+            dead,
+            repositories: Repositories::new(),
+        }
     }
 
-    pub fn level(&self, player: String) -> bool {
-        PlayerRepository.get_level(player) > MIN_LEVEL
+    pub fn level(&self, player_name: &str) -> bool {
+        self.repositories.player_repository.get_level(player_name) > MIN_LEVEL
     }
 
-    fn in_guild(&self, player: &String) -> bool {
-        PlayerRepository.get_guild(player).is_some()
+    fn in_guild(&self, player_name: &str) -> bool {
+        self.repositories
+            .player_repository
+            .get_guild(player_name)
+            .is_some()
     }
 
     pub fn guild(&self) -> bool {
@@ -29,10 +35,13 @@ impl PlayerValidation {
         let dead = &self.dead;
 
         if self.in_guild(killer) && self.in_guild(dead) {
-            return PlayerRepository.get_guild(killer).unwrap()
-                == PlayerRepository.get_guild(dead).unwrap();
+            return self
+                .repositories
+                .player_repository
+                .get_guild(killer)
+                .unwrap()
+                == self.repositories.player_repository.get_guild(dead).unwrap();
         }
         false
     }
-    */
 }

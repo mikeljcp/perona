@@ -16,6 +16,7 @@ impl Database {
     where
         P: Params,
     {
+        println!("{:?}", self.client.path());
         self.client.execute(query, params)
     }
 
