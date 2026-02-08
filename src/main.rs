@@ -1,10 +1,10 @@
 fn main() {
-    let client = perona_memory::run(13104);
+    let client = perona_memory::read(4684);
 
     match client {
         Ok(game) => {
-            game.messages();
-        }
+         println!("{:?}", game.messages());
+      }
         Err(err) => eprintln!("{}", err),
     }
 }

@@ -9,3 +9,4 @@ exclude = ["/target"]
 proc_mem = "0.1.6"
 serde = { version = "1", features = ["derive"] }
 perona-types = { path = "../types", version = "0.1.0" }
+regex = "1.12.3"

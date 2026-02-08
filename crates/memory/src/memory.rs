@@ -29,8 +29,4 @@ impl Memory {
     pub(crate) fn main_module(&self) -> Result<Module, ProcMemError> {
         self.process.module(self.process.name())
     }
-
-    pub(crate) fn igcn_module(&self) -> Result<Module, ProcMemError> {
-        self.process.module("IGC.dll")
-    }
 }
